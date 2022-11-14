@@ -9,11 +9,14 @@
 
     </head>
     <body>
+        <!-- Header and Top-Page Text -->
         <header id="header">
             <h1 id="header-text-big" class="header-text">Flight Tracker</h1>
             <h4 id="header-text-small" class="header-text">Just a Button Click Away</h4>
             <p id="header-info" class="header-text">Input a location, a flight number and a date and see where your chosen flight is, whether it is running on time and track it throughout it's flight.</p>
         </header>
+
+        <!-- Information Input Fields -->
         <section id="flight-tracker-app">
             <div class="flight-tracker-form">
                 <form name="inputs" class="inputs">
@@ -26,15 +29,18 @@
                     <div class="date-choice">
                         <input type="date" name="date-input" placeholder="Choose Date">
                         <i class="gg-calendar"></i>
-                    </div> 
-                    
+                    </div>
+                    <div class="submit-button">
+                        <button class="button" type="submit">Find Flights</button>
+                    </div>
                 </form>
-                <div class="submit-button">
-                    <button class="button" type="submit">Find Flights</button>
-                </div>
             </div>
+
+            <!-- Information Outputs based on above Input Field Submissions -->
             <div class="flight-results">
-                
+                <div class="info-top"></div>
+                <div class="info-middle"></div>
+                <div class="info-bottom"></div>
             </div>
         </section>
     </body>
