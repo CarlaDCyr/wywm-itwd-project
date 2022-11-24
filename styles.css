@@ -30,7 +30,7 @@ h4, p{
 /* Input Fields Styling */
 input[type=text], input[type=date]{
     padding: 29px;
-    box-shadow: 0 0 15px 4px lightgray;
+    box-shadow: 0 0 15px 2px lightgray;
     border-top: none;
     border-bottom: none;
     border-left: none;
@@ -40,6 +40,7 @@ input[type=text], input[type=date]{
     font-size: 12px;
 }
 
+/* Calendar Icon */
 .gg-calendar{
     margin-top: -43px;
     margin-left: 200px;
@@ -48,6 +49,19 @@ input[type=text], input[type=date]{
     color: #2A314F;
 
 }
+
+.flight-tracker-form{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.input-box{
+    display: inline-block;
+
+}
+
 
 /* "Find Flights" Button Styling */
 div .submit-button{
@@ -85,4 +99,37 @@ div .submit-button{
     background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
     background-image: linear-gradient(to  bottom, #3cb0fd, #3498db);
     text-decoration: none;
+}
+
+/* Flight Results pane */
+
+.flight-results-top{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.info-top{
+    width: 100%;
+    background-color: lightgray;
+    height: 75px;
+}
+
+.flight-results-middle{
+    display: flex;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#info-middle-1{
+    background-color: white;
+    height: 200px;
+    flex: 1;
+    border-right: 2px solid black;
+}
+
+#info-middle-2{
+    background-color: blue;
+    height: 200px;
+    flex: 1;
 }

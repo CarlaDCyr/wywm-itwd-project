@@ -20,13 +20,13 @@
         <section id="flight-tracker-app">
             <div class="flight-tracker-form">
                 <form name="inputs" class="inputs">
-                    <div class="airline">
+                    <div class="airline input-box">
                         <input type="text" name="airline-input" placeholder="Airline (e.g Air Canada">
                     </div>
-                    <div class="flight-number">
+                    <div class="flight-number input-box">
                         <input type="text" name="flight-number-input" placeholder="Flight Number (e.g AC176)">
                     </div>
-                    <div class="date-choice">
+                    <div class="date-choice input-box">
                         <input type="date" name="date-input" placeholder="Choose Date">
                         <i class="gg-calendar"></i>
                     </div>
@@ -38,9 +38,24 @@
 
             <!-- Information Outputs based on above Input Field Submissions -->
             <div class="flight-results">
-                <div class="info-top"></div>
-                <div class="info-middle"></div>
-                <div class="info-bottom"></div>
+                <div class="flight-results-top">
+                    <div class="info-top">
+                        <div class="flight-number"></div>
+                        <div class="flight-route"></div>
+                        <div class="flight-status"></div>
+                    </div>
+                </div>
+                <div class="flight-results-middle">
+                    <div class="info-middle" id="info-middle-1">
+                        <div class="location"></div>
+                        <div class="schedule"></div>
+                        <div class="terminal-gate"></div>
+                    </div>
+                    <div class="info-middle" id="info-middle-2">
+                        <div class="location"></div>
+                        <div class="schedule"></div>
+                        <div class="terminal-gate"></div>
+                    </div>
             </div>
         </section>
     </body>
