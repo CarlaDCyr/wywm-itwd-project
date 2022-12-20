@@ -5,58 +5,25 @@
         <meta name="viewport" content="width=device-width, inital-scale=1.0">
         <title>ITWD Project</title>
         <link rel="stylesheet" href="styles.css">
-        <link href='https://css.gg/calendar.css' rel='stylesheet'>
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Sniglet" />
 
     </head>
     <body>
-        <!-- Header and Top-Page Text -->
-        <header id="header">
-            <h1 id="header-text-big" class="header-text">Flight Tracker</h1>
-            <h4 id="header-text-small" class="header-text">Just a Button Click Away</h4>
-            <p id="header-info" class="header-text">Input a location, a flight number and a date and see where your chosen flight is, whether it is running on time and track it throughout it's flight.</p>
-        </header>
-
-        <!-- Information Input Fields -->
-        <section id="flight-tracker-app">
-            <div class="flight-tracker-form">
-                <form name="inputs" class="inputs">
-                    <div class="airline input-box">
-                        <input type="text" name="airline-input" placeholder="Airline (e.g Air Canada">
-                    </div>
-                    <div class="flight-number input-box">
-                        <input type="text" name="flight-number-input" placeholder="Flight Number (e.g AC176)">
-                    </div>
-                    <div class="date-choice input-box">
-                        <input type="date" name="date-input" placeholder="Choose Date">
-                        <i class="gg-calendar"></i>
-                    </div>
-                    <div class="submit-button">
-                        <button class="button" type="submit">Find Flights</button>
-                    </div>
-                </form>
+        <div class="app-boundary">
+            
+            <!-- Drink app header -->
+            <div class="header">
+                <img src="images/cocktail-graphic.png" id="cocktail-graphic" alt="graphic image of a pink cocktail">
+                <h1 id="title">Feelin' Bubbly?</h1>
+            </div>
+            
+            <!-- Card holding the drink image, ingredients list and recipe -->
+            <div class="drink-card">
             </div>
 
-            <!-- Information Outputs based on above Input Field Submissions -->
-            <div class="flight-results">
-                <div class="flight-results-top">
-                    <div class="info-top">
-                        <div class="flight-number"></div>
-                        <div class="flight-route"></div>
-                        <div class="flight-status"></div>
-                    </div>
-                </div>
-                <div class="flight-results-middle">
-                    <div class="info-middle" id="info-middle-1">
-                        <div class="location"></div>
-                        <div class="schedule"></div>
-                        <div class="terminal-gate"></div>
-                    </div>
-                    <div class="info-middle" id="info-middle-2">
-                        <div class="location"></div>
-                        <div class="schedule"></div>
-                        <div class="terminal-gate"></div>
-                    </div>
+            <!-- Drink choices menu -->
+            <div class="drink-choices">
             </div>
-        </section>
+        </div>
     </body>
 </html>
