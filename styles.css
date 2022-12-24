@@ -15,12 +15,16 @@
     background-color: #ffe8ee;
     margin: 10px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .header{
     display: flex;
     justify-content: center;
     margin: 20px 10px;
-   column-gap: 50px;
+    column-gap: 50px;
 }
 
 #cocktail-graphic{
@@ -42,7 +46,47 @@
     height: 40vh;
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin: 20vh auto;
+    text-align: center;
+    box-shadow: 5px 5px 5px #3c3951;
+}
+
+.drink-image{
+    width: 18vw;
+    height: 20vh;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #3c3951;
+}
+
+.drink-name{
+    background-color: #F37068;
+    margin: auto 10px;
+     border-radius: 5px;
+}
+
+.ingredients{
+    background-color: #F37068;
+    margin: auto 10px;
+    border-radius: 5px;
+}
+
+.drink-choices{
+    background-color: #F37068;
+    width: 60vw;
+    height: 15vh;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #3c3951;
+}
+
+.choice-title{
+    background-color: #f19c98;
+    text-align: center;
+    color:#035e79;
+    width: 20vw;
+    margin: 5px auto;
+    border-radius: 5px;
+
 }
