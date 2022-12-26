@@ -6,6 +6,7 @@
         <title>ITWD Project</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Sniglet" />
+        <script defer src="myScript.js"></script>
 
     </head>
     <body>
@@ -18,7 +19,7 @@
             </div>
             
             <!-- Card holding the drink image, ingredients list and recipe -->
-            <div class="drink-card">
+            <div class="drink-card" id="drinkCard">
                 <img src="images/Drink-Placeholder-Image.jpg" alt="Image of the drink being displayed" class="drink-image">
                 <div class="drink-name">
                     <h1>Drink Name</h1>
@@ -54,6 +55,8 @@
                             <option value="Placeholder">Placeholder</option>
                         </select>
                     </form>
+                    <button id="search">Search</button>
+                    <button id="random">Surprise Me</button>
                 </div>
             </div>
         </div>
