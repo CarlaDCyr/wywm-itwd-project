@@ -44,7 +44,7 @@
 .drink-card{
     background-color: #f19c98;
     width: 20vw;
-    height: 40vh;
+    height: auto;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -64,13 +64,17 @@
 .drink-name{
     background-color: #F37068;
     margin: auto 10px;
-     border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px;
+
 }
 
 .ingredients{
     background-color: #F37068;
-    margin: auto 10px;
+    margin: 10px 10px;
     border-radius: 5px;
+    height: 30vh;
+    padding: 5px;
 }
 
 .drink-choices{
@@ -92,13 +96,30 @@
     box-shadow: 2px 2px 2px #3c3951;
 }
 
+.random-btn{
+    margin: 2vh auto;
+    text-align: center;
+}
+
+.random-btn button{
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #035e79;
+    color: #aad5dc;
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow: 2px 2px 2px #3c3951;
+    box-shadow: 2px 2px 2px #3c3951;
+}
+
 form {
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
     column-gap: 20px;
-    margin: 30px auto;
+    margin: 4vh auto;
 }
 
 select {
