@@ -113,6 +113,11 @@
     box-shadow: 2px 2px 2px #3c3951;
 }
 
+.random-btn button:hover{
+    background-color: #3c3951;
+    color: #ffe8ee;
+}
+
 .choices{
     justify-content: center;
 }
@@ -128,7 +133,27 @@ form {
     margin: 5px;
 }
 
+.submit-btn{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
 #submit{
-    width: 75px;
-    height: 10px;
+    width: auto;
+    height: auto;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #035e79;
+    color: #aad5dc;
+    border-radius: 5px;
+}
+
+#submit:hover{
+    background-color: #3c3951;
+    color: #ffe8ee;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    border-radius: 5px;
 }
