@@ -1,88 +1,81 @@
-// Get the elements from the HTML
-const randomButton = document.getElementById("randomButton");
-const drinkImage = document.getElementById("drinkImage");
-const drinkName = document.getElementById("drinkName");
-const cocktailIngredients = document.getElementById("cocktailIngredients");
-const ingredientInput = document.getElementById("ingredient");
-const glassInput = document.getElementById("glass");
-const typeInput = document.getElementById("type");
+// Setting my variables
 
-// Add event listener to the "Surprise Me" button
-randomButton.addEventListener("click", function() {
-    // Fetch random drink from the Cocktail DB API
-    fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
-    .then(response => response.json())
-    .then(data => {
-        // Get the drink data
-        const drink = data.drinks[0];
+const API_URL = 'https://www.thecocktaildb.com/api/json/v1/1/';
+const drinkImage = document.getElementById('drinkImage');
+const drinkName = document.getElementById('drinkName');
+const cocktailIngredients = document.getElementById('cocktailIngredients');
+const randomButton = document.getElementById('randomButton');
+const ingredient = document.getElementById('ingredient');
+const glass = document.getElementById('glass');
+const type = document.getElementById('type');
+const submit = document.getElementById('submit');
 
-        // Update the drink image
-        drinkImage.src = drink.strDrinkThumb;
 
-        // Update the drink name
-        drinkName.textContent = drink.strDrink;
-
-        // Update the ingredients list
-        let ingredients = "";
-        for(let i = 1; i <= 15; i++) {
-            if(drink[`strIngredient${i}`]) {
-                ingredients += `${drink[`strIngredient${i}`]} - ${drink[`strMeasure${i}`]}<br>`;
+/**
+ * Retrieves a random drink from the API and updates the HTML with the data
+ */
+function getRandomDrink() {
+    fetch(`${API_URL}random.php`)
+        .then(response => response.json())
+        .then(data => {
+            // Get the drink data from the API response
+            const drinkData = data.drinks[0];
+            // If there is no drink data, throw an error
+            if (!drinkData) {
+                throw new Error('No drink data found');
             }
-        }
-        cocktailIngredients.innerHTML = ingredients;
-    });
-});
-
-// Add event listener to the ingredient input
-ingredientInput.addEventListener("input", function() {
-    // Fetch drinks by ingredient from the Cocktail DB API
-    fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredientInput.value}`)
-    .then(response => response.json())
-    .then(data => {
-        // Code to update the UI with the filtered drinks goes here
-        const drinks = data.drinks;
-        drinks.forEach(drink => {
-            // Update the drink image
-            drinkImage.src = drink.strDrinkThumb;
-
-            // Update the drink name
-            drinkName.textContent = drink.strDrink;
-
-            // Update the ingredients list
-            let ingredients = "";
-            for(let i = 1; i <= 15; i++) {
-                if(drink[`strIngredient${i}`]) {
-                    ingredients += `${drink[`strIngredient${i}`]} - ${drink[`strMeasure${i}`]}<br>`;
+            // Get the image url, name, and ingredients from the drink data
+            const imageUrl = drinkData.strDrinkThumb;
+            const name = drinkData.strDrink;
+            const ingredients = [];
+            for (let i = 1; i <= 15; i++) {
+                const ingredient = drinkData[`strIngredient${i}`];
+                if (ingredient) {
+                    ingredients.push(ingredient);
                 }
             }
-            cocktailIngredients.innerHTML = ingredients;
-        });
-    });
-});
+            // Update the HTML with the drink data
+            drinkImage.src = imageUrl;
+            drinkName.innerText = name;
+            cocktailIngredients.innerText = ingredients.join(', ');
+        })
+        .catch(error => console.log(error));
+}
 
-// Add event listener to the glass input
-glassInput.addEventListener("input", function() {
-    // Fetch drinks by glass from the Cocktail DB API
-    fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=${glassInput.value}`)
-    .then(response => response.json())
-    .then(data => {
-        // Code to update the UI with the filtered drinks goes here
-        const drinks = data.drinks;
-        drinks.forEach(drink => {
-            // Update the drink image
-            drinkImage.src = drink.strDrinkThumb;
+// Add an event listener to the random button to retrieve a random drink when clicked
+randomButton.addEventListener('click', getRandomDrink);
 
-            // Update the drink name
-            drinkName.textContent = drink.strDrink;
-
-            // Update the ingredients list
-            let ingredients = "";
-            for(let i = 1; i <= 15; i++) {
-                if(drink[`strIngredient${i}`]) {
-                    ingredients += `${drink[`strIngredient${i}`]} - ${drink[`strMeasure${i}`]}<br>`;
+// Add an event listener to the submit button to retrieve a drink based on the input when clicked
+submit.addEventListener('click', function (event) {
+    // Prevent the default form submit behavior
+    event.preventDefault();
+    // Get the input values
+    const ingredientValue = ingredient.value;
+    const glassValue = glass.value;
+    const typeValue = type.value;
+    fetch(`${API_URL}filter.php?i=${ingredientValue}&g=${glassValue}&c=${typeValue}`)
+        .then(response => response.json())
+        .then(data => {
+            // Get the drink data from the API response
+            const drinkData = data.drinks[0];
+            // If there is no drink data, throw an error
+            if (!drinkData) {
+                throw new Error('No drink data found');
+            }
+            // Get the image url, name, and ingredients from the drink data
+            const imageUrl = drinkData.strDrinkThumb;
+            const name = drinkData.strDrink;
+            const ingredients = [];
+            for (let i = 1; i <= 15; i++) {
+                const ingredient = drinkData[`strIngredient${i}`];
+                if (ingredient) {
+                    ingredients.push(ingredient);
                 }
             }
-            cocktailIngredients.innerHTML = ingredients;
-        });
-    });
+            // Update the HTML with the drink data
+            drinkImage.src = imageUrl;
+            drinkName.innerText = name;
+            cocktailIngredients.innerText = ingredients.join(', ');
+        })
+        .catch(error => console.log(error));
 });
