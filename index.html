@@ -24,7 +24,7 @@
                     <h1 id="drinkName">Drink Name</h1>
                 </div>
                 <div class="ingredients">
-                    <p id="cocktailIngredients">blah blah blah blah</p>
+                    <p id="cocktailIngredients"></p>
                 </div>
             </div>
 
@@ -38,28 +38,17 @@
                     <h1>Pick Your Poison</h1>
                 </div>
                 <div class="choices">
-                    <form action="#">
-                        <select name="Category" id="findByCategory">
-                            <option value="Placeholder">Category</option>
-                            <option value="Placeholder">Placeholder</option>
-                            <option value="Placeholder">Placeholder</option>
-                            <option value="Placeholder">Placeholder</option>
-                        </select>
-                        <select name="Glass" id="findByGlass">
-                            <option value="Placeholder">Glass Type</option>
-                            <option value="Placeholder">Placeholder</option>
-                            <option value="Placeholder">Placeholder</option>
-                            <option value="Placeholder">Placeholder</option>
-                        </select>
-                        <select name="Ingredient" id="findByIngredient">
-                            <option value="Placeholder">Ingredient</option>
-                            <option value="Placeholder">Placeholder</option>
-                            <option value="Placeholder">Placeholder</option>
-                            <option value="Placeholder">Placeholder</option>
-                        </select>
-                    </form>
+                    <form>
+                        <label for="ingredient">Ingredient:</label><br>
+                        <input type="text" id="ingredient" name="ingredient"><br>
+                        <label for="glass">Glass Type:</label><br>
+                        <input type="text" id="glass" name="glass">
+                        <label for="type">Drink Type:</label><br>
+                        <input type="text" id="type" name="type">
+                      </form>
                 </div>
             </div>
         </div>
+        <script src="myScript.js"></script>
     </body>
 </html>
