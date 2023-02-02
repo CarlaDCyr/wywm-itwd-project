@@ -192,6 +192,7 @@ form input {
     .header {
       font-size: 50px;
       flex-direction: column;
+      justify-content: center;
     }
   
     .drink-card {
@@ -220,7 +221,8 @@ form input {
     }
     .random-btn button{
         font-size: 18px;
-        
+        padding-bottom: 5px;
+
     }
   }
   
