@@ -191,6 +191,7 @@ form input {
 @media only screen and (max-width: 600px) {
     .header {
       font-size: 50px;
+      flex-direction: column;
     }
   
     .drink-card {
@@ -216,6 +217,10 @@ form input {
   
     #submit {
       font-size: 18px;
+    }
+    .random-btn button{
+        font-size: 18px;
+        
     }
   }
   
