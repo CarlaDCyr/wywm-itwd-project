@@ -86,7 +86,8 @@ submitBtn.addEventListener("click", event => {
           .then(response => response.json())
           .then(data => {
             const drinkDetails = data.drinks[0];
-            // Display the details in the desired HTML elements
+
+          // Display the details in the desired HTML elements
           });
           fetch(`${idURL}${drinkId}`)
           .then(response => response.json())
@@ -104,4 +105,5 @@ submitBtn.addEventListener("click", event => {
           }); 
       });
   });
+
 

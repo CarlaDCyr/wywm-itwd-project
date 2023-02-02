@@ -10,13 +10,13 @@
     </head>
     <body>
         <div class="app-boundary">
-            
+
             <!-- Drink app header -->
             <div class="header">
                 <img src="images/cocktail-graphic.png" id="cocktail-graphic" alt="graphic image of a pink cocktail">
                 <h1 id="title">Feelin' Bubbly?</h1>
             </div>
-            
+
             <!-- Card holding the drink image, ingredients list and recipe -->
             <div class="drink-card">
 
@@ -31,7 +31,6 @@
                 <!--Ingredients Display-->
                 <div class="ingredients">
                     <h3>Ingredients</h3>
-                    <!-- <p id="cocktailIngredients"></p> -->
                     <p id="cocktailIngredients"></p>
                 </div>
                 <div class="random-btn">
@@ -39,13 +38,13 @@
                 </div> 
             </div>
 
-            
-
             <!-- Drink choices menu -->
             <div class="drink-choices">
                 <div class="choice-title">
                     <h1>Pick Your Poison</h1>
                 </div>
+
+            <!-- Dropdown and button to display a drink based on ingredient choice -->
                 <div class="choices">
                     <form>
                         <select id="ingredient" name="ingredient">
@@ -53,11 +52,15 @@
                         </select>
                     </form>
                 </div>
+
+            <!-- Submits ingredient choice selection -->
                 <div class="submit-btn">
                     <input type="submit" id="submit" name="submit">
                 </div>
             </div>
         </div>
+
+        <!-- Javascript file -->
         <script src="apps.js"></script>
     </body>
 </html>

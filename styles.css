@@ -1,3 +1,4 @@
+/* -------------- Define global variables -------------- */
 :root {
   --light-pink: #FFE8EE;
   --medium-pink: #F19C98;
@@ -8,10 +9,12 @@
   --font-family: monospace, sans-serif;
 }
 
+/* -------------- Set font family for all elements -------------- */
 * {
   font-family: var(--font-family);
 }
 
+/* -------------- Styling for app background and boundaries, defining child alignment -------------- */
 .app-boundary {
   background-color: var(--light-pink);
   margin: 10px;
@@ -22,6 +25,7 @@
   justify-content: center;
 }
 
+/* -------------- Defining child alignments and alignment of header element -------------- */
 .header {
   display: flex;
   justify-content: center;
@@ -29,6 +33,7 @@
   column-gap: 50px;
 }
 
+/* Defining size of cocktail image */
 #cocktail-graphic {
   width: 150px;
   height: 150px;
@@ -42,6 +47,7 @@
   text-shadow: 5px 5px var(--light-blue);
 }
 
+/* -------------- Styling for drink display -------------- */
 .drink-card {
   background-color: var(--medium-pink);
   width: 50%;
@@ -97,6 +103,7 @@
   box-shadow: 2px 2px 2px var(--dark-blue);
 }
 
+/* -------------- "Surprise Me" Button styling -------------- */
 .random-btn{
     margin: 10px auto;
     text-align: center;
@@ -119,6 +126,7 @@
     color: #ffe8ee;
 }
 
+/* -------------- Drink ingredient choice styling -------------- */
 .choices{
     justify-content: center;
 }
@@ -137,6 +145,7 @@ form input {
     border-radius: 5px;
 }
 
+/* -------------- Submit button styling -------------- */
 .submit-btn{
     display: flex;
     justify-content: center;
@@ -162,6 +171,7 @@ form input {
     border-radius: 5px;
 }
 
+/* -------------- Responsive styling for screens smaller than 720px -------------- */
 @media only screen and (max-width: 720px) {
     .header {
     flex-direction: column;
@@ -188,6 +198,7 @@ form input {
     }
 }
 
+/* -------------- Responsive styling for screens smaller than 600px -------------- */
 @media only screen and (max-width: 600px) {
     .header {
       font-size: 50px;
