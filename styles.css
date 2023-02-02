@@ -1,103 +1,104 @@
-/*Color Palette
-    Light Pink - #FFE8EE
-    Medium Pink - #F19C98
-    Dark Pink - #F37068
-    Light Blue - #AAD5DC
-    Medium Blue - #035E79
-    Dark Blue - #3C3951
-*/
+:root {
+  --light-pink: #FFE8EE;
+  --medium-pink: #F19C98;
+  --dark-pink: #F37068;
+  --light-blue: #AAD5DC;
+  --medium-blue: #035E79;
+  --dark-blue: #3C3951;
+  --font-family: monospace, sans-serif;
+}
 
 * {
-  margin: 0;
-  font-family: monospace, sans-serif;
+  font-family: var(--font-family);
 }
 
-.app-boundary{
-    background-color: #ffe8ee;
-    margin: 10px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.header{
-    display: flex;
-    justify-content: center;
-    margin: 20px 10px;
-    column-gap: 50px;
+.app-boundary {
+  background-color: var(--light-pink);
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#cocktail-graphic{
-    width: 100px;
-    height: 100px;
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 20px 10px;
+  column-gap: 50px;
 }
 
-#title{
-    font-weight: bolder;
-    font-size: 100px;
-    font-family:monospace;
-    color: #035e79;
-    text-shadow: 5px 5px #aad5dc;
+#cocktail-graphic {
+  width: 150px;
+  height: 150px;
 }
 
-.drink-card{
-    background-color: #f19c98;
-    width: 50%;
-    height: auto;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    box-shadow: 5px 5px 5px #3c3951;
+#title {
+  font-weight: bolder;
+  font-size: 100px;
+  font-family: var(--font-family);
+  color: var(--medium-blue);
+  text-shadow: 5px 5px var(--light-blue);
 }
 
-.drink-image{
-    width: 18vw;
-    height: 20vh;
-    margin: 10px auto;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px #3c3951;
+.drink-card {
+  background-color: var(--medium-pink);
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 5px 5px 5px var(--dark-blue);
 }
 
-.drink-name{
-    background-color: #F37068;
-    margin: auto 10px;
-    border-radius: 5px;
-    padding: 5px;
-
+.drink-image {
+  width: 40%;
+  height: 40%;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px var(--dark-blue);
 }
 
-.ingredients{
-    background-color: #F37068;
-    margin: 10px 10px;
-    border-radius: 5px;
-    height: 30vh;
-    padding: 5px;
+.drink-name {
+  margin: auto 10px;
+  border-radius: 5px;
+  padding: 5px;
+  text-shadow: 2px 2px var(--dark-pink);
 }
 
-.drink-choices{
-    background-color: #F37068;
-    width: 60vw;
-    height: auto;
-    margin: 30px auto;
-    border-radius: 5px;
-    box-shadow: 5px 5px 5px #3c3951;
+.ingredients {
+  background-color: var(--dark-pink);
+  margin: 10px 15px 0px 15px;
+  border-radius: 5px;
+  height: auto;
+  padding: 5px;
+  box-shadow: 2px 2px 2px var(--dark-blue);
 }
 
-.choice-title{
-    background-color: #f19c98;
-    text-align: center;
-    color:#035e79;
-    width: 20vw;
-    margin: 10px auto;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px #3c3951;
+.drink-choices {
+  background-color: var(--dark-pink);
+  width: 60vw;
+  height: auto;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px var(--dark-blue);
+}
+
+.choice-title {
+  background-color: var(--medium-pink);
+  text-align: center;
+  color: var(--medium-blue);
+  width: 20vw;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px var(--dark-blue);
 }
 
 .random-btn{
-    margin: 2vh auto;
+    margin: 10px auto;
     text-align: center;
 }
 
@@ -125,12 +126,15 @@
 form {
     display: flex;
     justify-content: center;
-    margin: 5px;
 }
 
-#ingredient, #glass, #type{
+form input {
+    width: 100%;
     border-radius: 5px;
-    margin: 5px;
+    }
+
+#ingredient{
+    border-radius: 5px;
 }
 
 .submit-btn{
@@ -157,3 +161,29 @@ form {
     font-size: 20px;
     border-radius: 5px;
 }
+
+@media only screen and (max-width: 720px) {
+    .header {
+    flex-direction: column;
+    }
+    #title {
+    font-size: 50px;
+    text-shadow: 2px 2px #aad5dc;
+    }
+    .drink-card {
+    width: 90%;
+    }
+    .drink-image {
+    width: 40%;
+    height: 40vh;
+    }
+    .drink-choices {
+    width: 90%;
+    }
+    .choice-title {
+    width: 40%;
+    }
+    .random-btn button {
+    width: 80%;
+    }
+    }
