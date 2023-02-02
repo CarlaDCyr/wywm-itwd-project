@@ -186,4 +186,36 @@ form input {
     .random-btn button {
     width: 80%;
     }
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+      font-size: 50px;
     }
+  
+    .drink-card {
+      width: 80%;
+    }
+  
+    .drink-image {
+      width: 60%;
+      height: 60%;
+    }
+  
+    .drink-choices {
+      width: 90vw;
+    }
+  
+    .choice-title {
+      width: 40vw;
+    }
+  
+    form input {
+      width: 80%;
+    }
+  
+    #submit {
+      font-size: 18px;
+    }
+  }
+  
